@@ -1,0 +1,151 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Movieverse API",
+    "description": "API para gerenciar filmes no Movieverse",
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:5000"
+    }
+  ],
+  "paths": {
+    "/": {
+      "get": {
+        "summary": "Retorna a lista de filmes",
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+        "post": {
+          "summary": "Adiciona um novo filme",
+          "requestBody": {
+            "required": true,
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "titulo": {
+                      "type": "string",
+                      "required": true,
+                      "in": "path",
+                      "example": "Filme Exemplo"
+                    },
+                    "ano_lancamento": {
+                      "type": "integer",
+                      "required": true,
+                      "in": "path",
+                      "example": 2022
+                    },
+                    "genero": {
+                      "type": "string",
+                      "required": true,
+                      "in": "path",
+                      "example": "Ação"
+                    },
+                    "descricao": {
+                      "type": "string",
+                      "required": true,
+                      "in": "path",
+                      "example": "Um filme emocionante cheio de ação e aventura"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Filme adicionado com sucesso"
+          }
+        }
+      }
+    },
+    "/edit/{filme_id}": {
+      "get": {
+        "summary": "Retorna os detalhes de um filme específico",
+        "parameters": [
+          {
+            "name": "filme_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualiza um filme existente",
+        "parameters": [
+          {
+            "name": "filme_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "titulo": {
+                    "type": "string"
+                  },
+                  "ano_lancamento": {
+                    "type": "integer"
+                  },
+                  "genero": {
+                    "type": "string"
+                  },
+                  "descricao": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Filme atualizado com sucesso"
+          }
+        }
+      }
+    },
+    "/excluir_filme/{filme_id}": {
+      "delete": {
+        "summary": "Exclui um filme",
+        "parameters": [
+          {
+            "name": "filme_id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Filme excluído com sucesso"
+          }
+        }
+      }
+    }
+  }
+}
