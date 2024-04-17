@@ -31,6 +31,7 @@ Nesse projeto, trabalhei com Flask, Python, MySQL com SQLAlchemy, HTML, CSS puro
 
 O arquivo banco_de_dados.py incorpora o banco de dados e dá a carga inicial, necessitando apenas que a password seja alterada para a do seu user.
 O arquivo app.py gera a aplicação, estabelecendo conexão ao localhost.
+Nesse README.md, selecione a opção "CODE" para melhor visualização dos pacotes a serem instalados.
 
 Autor: João Vitor Alves de Souza Taube
 LinkedIn: https://www.linkedin.com/in/joaotaube/
