@@ -2,7 +2,7 @@ Olá! Sou João Taube, um desenvolvedor iniciante, pós-graduando em Engenharia 
 Fiz esse projeto para meu MVP(Minimum Viable Product), sendo meu primeiro projeto de desenvolvimento de API.
 "MovieVerse", como denominei, tem como intuito ser uma API que guarda nomes de filmes, descrições de filmes, gêneros e anos de lançamento. Nessa API é possível criar, editar e deletar filmes, incorporando as rotas POST, PUT e DELETE.
 
-lista de pacotes instalados via pip para essa aplicação:
+lista de pacotes instalados via pip para essa aplicação (também listados no requirements.txt, porém reitero que nem todos foram usados, apenas instalados de outros momentos):
 Package                Version
 ---------------------- -------
 bcrypt                 4.1.2; 
